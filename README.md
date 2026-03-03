@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎬 AI Movie Insight Builder
 
-## Getting Started
+A full-stack AI-powered movie analytics application built using Next.js (App Router) and the OpenAI API.
 
-First, run the development server:
+Users can enter an IMDb Movie ID (e.g., tt0133093) to retrieve structured movie metadata along with AI-generated audience sentiment insights.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Live Deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 Live URL: (Add your Vercel deployment link here)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🎯 Core Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+IMDb ID input with strict format validation
 
-## Learn More
+Fetches movie metadata:
 
-To learn more about Next.js, take a look at the following resources:
+Title
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Poster
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Cast
 
-## Deploy on Vercel
+Release Year
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+IMDb Rating
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Plot Summary
+
+Simulated structured audience reviews
+
+AI-generated:
+
+3–4 line audience sentiment summary
+
+Overall sentiment classification (Positive / Mixed / Negative)
+
+Loading states & graceful error handling
+
+Fully responsive design (mobile + desktop)
+
+Production-ready API structure
+
+🛠 Tech Stack
+Frontend
+
+Next.js (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+Backend
+
+Next.js API Routes
+
+OMDb API (movie metadata)
+
+OpenAI API (sentiment analysis)
+
+Zod (backend validation)
+
+🧠 Why OMDb?
+
+OMDb was chosen over TMDB because:
+
+Direct support for IMDb ID lookup (i=ttXXXXXXX)
+
+No ID conversion layer required
+
+Lightweight and fast integration
+
+Ideal for an 8–10 hour engineering constraint
+
+This reduced unnecessary complexity while maintaining reliability.
+
+🤖 AI Integration Design
+
+The OpenAI API is used to:
+
+Analyze structured audience reviews
+
+Generate a concise sentiment summary
+
+Classify overall audience reaction as:
+
+Positive
+
+Mixed
+
+Negative
+
+Stability Measures
+
+Reviews are limited before sending to AI (token control)
+
+Strict JSON structure enforced
+
+Safe JSON parsing
+
+Graceful fallback if quota/rate-limit occurs
+
+This ensures production resilience.
+
+🧩 Architecture Overview
+
+Client → API Route → OMDb → Review Simulation → OpenAI → Structured JSON → UI
+
+Engineering Principles Applied
+
+Separation of concerns
+
+Service-layer abstraction
+
+Backend validation using Zod
+
+Type-safe interfaces
+
+Controlled AI prompt design
+
+Error-first API handling
+
+Environment variable security
+
+📌 Assumptions & Design Decisions
+
+OMDb does not provide audience reviews.
+
+Scraping IMDb was avoided due to:
+
+Stability concerns
+
+Rate limits
+
+Deployment reliability
+
+Simulated structured reviews were implemented to:
+
+Ensure deterministic AI input
+
+Maintain production safety
+
+Avoid scraping violations
+
+This approach prioritizes stability, clarity, and maintainability within assignment constraints.
+
+👨‍💻 Author
+
+Shankar Jangid
+B.Tech (Information Technology)
+Full-Stack Developer
