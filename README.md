@@ -1,1 +1,0 @@
-# movie-insight-STIR
