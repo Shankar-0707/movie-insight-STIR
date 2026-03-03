@@ -6,7 +6,7 @@ Users can enter an IMDb Movie ID (e.g., tt0133093) to retrieve structured movie 
 
 🚀 Live Deployment
 
-🔗 Live URL: (Add your Vercel deployment link here)
+🔗 Live URL: movie-insight-stir.vercel.app
 
 🎯 Core Features
 
